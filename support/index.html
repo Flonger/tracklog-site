@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>技术支持 — 轨迹</title>
-  <meta name="description" content="轨迹应用的技术支持与联系方式。">
+  <meta name="description" content="轨迹（版本 1.0.0）技术支持：联系邮箱、问题反馈说明与常见问题。">
+  <link rel="canonical" href="https://blog.flonger.com/tracklog-site/support/">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -20,32 +21,76 @@
   </header>
   <main>
     <h1>技术支持</h1>
-    <p class="lead">轨迹不需要注册或登录。车库数据保存在你的手机本机；崩溃分析使用腾讯 Bugly，详见隐私政策。</p>
+    <p class="lead">轨迹不需要注册或登录。车库数据保存在你的手机本机；崩溃分析使用腾讯 Bugly（仅用于诊断闪退，不是客服聊天）。</p>
+    <p class="muted-inline">适用版本：应用 <strong>1.0.0</strong> · 包名 <code>com.tracklog.tracklog</code></p>
 
     <div class="card">
-      <h2 style="margin-top:0">如何获得帮助</h2>
-      <p>遇到闪退、导入导出、图鉴封面无法显示等问题，请发邮件说明机型、系统版本与复现步骤：</p>
-      <p><a class="cta" href="mailto:xue@flonger.com?subject=%E8%BD%A8%E8%BF%B9%20App%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">xue@flonger.com</a></p>
+      <h2 class="card-title">联系方式</h2>
+      <p>遇到闪退、导入导出失败、图鉴封面无法显示等问题，请发邮件。我们会按邮件回复，不设即时客服。</p>
+      <p><a class="cta" href="mailto:xue@flonger.com?subject=%E8%BD%A8%E8%BF%B9%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">xue@flonger.com</a></p>
+      <p class="muted-inline">建议主题：轨迹 技术支持</p>
     </div>
 
-    <h2>常见说明</h2>
+    <h2>反馈问题时请写明</h2>
+    <div class="card">
+      <ol>
+        <li>机型（例如 iPhone 15 Pro、某品牌 Android 机型）</li>
+        <li>系统版本（iOS 或 Android 版本号）</li>
+        <li>应用版本：<strong>1.0.0</strong></li>
+        <li>复现步骤：从哪个页面点了什么，出现什么现象</li>
+        <li>若方便，附上截图或屏幕录制；闪退可说明大致时间点</li>
+      </ol>
+      <p>信息越完整，越容易判断是界面问题、本机数据问题，还是已由 Bugly 采集到的崩溃。</p>
+    </div>
+
+    <h2>常见问题</h2>
+
+    <div class="faq">
+      <details open>
+        <summary>我的车库数据存在哪里？</summary>
+        <p>存在你使用的这台设备本地（应用目录与本地数据库）。没有账号，也没有我们自有服务器上的车库副本。</p>
+      </details>
+      <details>
+        <summary>卸载应用后数据会丢吗？</summary>
+        <p>会。卸载后本机车库数据随应用数据一并删除，我们无法代为找回。换机或重装前，请先在应用内导出 JSON 备份。</p>
+      </details>
+      <details>
+        <summary>为什么应用要联网？是不是「完全单机」？</summary>
+        <p>不是「完全不联网」。正式包需要网络，用于两件事：</p>
+        <ul>
+          <li>图鉴封面：向厂家图床请求封面图；</li>
+          <li>腾讯 Bugly：上报崩溃 / 异常，便于修复稳定性问题。</li>
+        </ul>
+        <p>车库条目正文（车号、买价等）不会作为业务数据上传。完整说明见 <a href="../privacy/">隐私政策</a>。</p>
+      </details>
+      <details>
+        <summary>没有账号，怎么备份？</summary>
+        <p>使用应用内的导入 / 导出 JSON：把车库写成你自己选择的文件保存；需要时再从该文件读回。应用不会在导出流程中代你把车库发往第三方。</p>
+      </details>
+      <details>
+        <summary>图鉴封面不显示怎么办？</summary>
+        <p>先确认设备已联网。部分厂家图床会校验来源（例如要求 Referer），网络环境或图床侧限制都可能导致封面空白，但通常不影响本机车库条目本身。仍无法显示时，把机型、系统版本、应用 1.0.0 与具体图鉴条目发到上方邮箱。</p>
+      </details>
+      <details>
+        <summary>闪退了怎么反馈？</summary>
+        <p>请发邮件说明机型、系统版本、应用 1.0.0、大致操作路径与时间。应用已接入腾讯 Bugly 采集崩溃堆栈，便于对照排查；Bugly 只做崩溃分析，不能替代邮件联系，也不是在线客服。</p>
+      </details>
+      <details>
+        <summary>买价显示「未标价」是什么意思？</summary>
+        <p>该车辆未填写买价时的界面提示。该数字不会因车库功能离开本机。</p>
+      </details>
+    </div>
+
+    <h2>相关链接</h2>
     <ul>
-      <li>没有账号体系，也不提供云同步或云端恢复车库。</li>
-      <li>卸载应用后，本机车库数据会一并删除，我们无法代为找回。</li>
-      <li>图鉴封面需要网络，仅用于向厂家图床请求封面图；车库条目内容不会作为业务数据上传。</li>
-      <li>应用接入腾讯 Bugly，用于崩溃 / 异常上报以修复稳定性问题；相关信息处理见 <a href="../privacy/">隐私政策</a>。</li>
-      <li>买价留空时界面显示「未标价」，该数字不会因车库功能离开本机。</li>
+      <li><a href="../">产品介绍（营销页）</a></li>
+      <li><a href="../privacy/">隐私政策</a>（版本 1.0.0，生效日期 2026-10-23）</li>
+      <li>腾讯 Bugly 官方隐私声明（崩溃 SDK，非本应用客服）：<a href="https://static.bugly.qq.com/bugly-sdk-privacy-statement.pdf" rel="noopener">PDF</a></li>
     </ul>
-
-    <h2>隐私</h2>
-    <p>完整说明见 <a href="../privacy/">隐私政策</a>（版本 1.0.0，生效日期 2026-10-23）。</p>
-
-    <h2>产品介绍</h2>
-    <p>功能概览见 <a href="../">产品页</a>。</p>
   </main>
   <footer>
     <div class="inner">
-      <p>轨迹 · 包名 com.tracklog.tracklog · <a href="mailto:xue@flonger.com">xue@flonger.com</a></p>
+      <p>轨迹 · 包名 com.tracklog.tracklog · 版本 1.0.0 · <a href="mailto:xue@flonger.com">xue@flonger.com</a></p>
     </div>
   </footer>
 </body>

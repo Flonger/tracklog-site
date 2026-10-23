@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>轨迹 — 本机铁路模型车库</title>
-  <meta name="description" content="本机记下模型车号和涂装。轨迹是给铁路模型收藏用的本机车库。">
+  <meta name="description" content="本机记下模型车号和涂装。轨迹是给铁路模型收藏用的本机车库：登记车辆、记养护、看图鉴、记运转，并按当前车库出统计。">
+  <link rel="canonical" href="https://blog.flonger.com/tracklog-site/">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,22 +20,69 @@
     </div>
   </header>
   <main>
+    <p class="eyebrow">铁路模型 · 本机车库 · 版本 1.0.0</p>
     <h1>轨迹</h1>
     <p class="lead">本机记下模型车号和涂装</p>
+    <p class="subtitle">本机铁路模型车库</p>
+
     <div class="card">
       <p>轨迹是给铁路模型收藏用的本机车库。你可以记下每辆车的车号、涂装、比例和养护，查看随包图鉴，记录布局上的运转，并按当前车库出统计。</p>
-      <p>这些记录只留在这台手机里，不需要注册。图鉴封面会向厂家图床请求图片；车库条目内容不会作为业务数据上传。应用使用腾讯 Bugly 做崩溃分析，详见隐私政策。买价没填时，统计显示未标价。</p>
-      <p><strong>即将上架</strong> App Store。本页仅作产品介绍与商店所需链接。</p>
+      <p>这些记录只留在这台手机里，不需要注册。买价没填时，统计显示未标价。</p>
     </div>
-    <p>
-      <a class="cta" href="support/">获取技术支持</a>
-      &nbsp;
-      <a href="privacy/">阅读隐私政策</a>
-    </p>
+
+    <h2>能做什么</h2>
+    <ul class="features">
+      <li>
+        <strong>车库登记</strong>
+        <span>车号、涂装、比例、厂家与备注，按当前收藏整理车辆。</span>
+      </li>
+      <li>
+        <strong>养护记录</strong>
+        <span>检修、清洁与维护条目挂在对应车辆上，方便回看做过什么。</span>
+      </li>
+      <li>
+        <strong>随包图鉴</strong>
+        <span>查看随包装载的图鉴条目；有封面时会向厂家图床请求图片。</span>
+      </li>
+      <li>
+        <strong>运转与布局</strong>
+        <span>记录布局上的运转情况，把实际跑过的内容留在本机。</span>
+      </li>
+      <li>
+        <strong>本机统计</strong>
+        <span>按当前车库汇总数量与买价；未填买价显示「未标价」。</span>
+      </li>
+      <li>
+        <strong>导入导出 JSON</strong>
+        <span>把车库写成你自己选的文件，或从备份文件读回；无需账号。</span>
+      </li>
+    </ul>
+
+    <h2>数据怎么处理</h2>
+    <div class="card">
+      <ul class="plain">
+        <li>车库条目（车号、涂装、买价、本地照片等）保存在这台设备本地，不需要注册或登录。</li>
+        <li>图鉴封面需要网络：打开带封面的条目时，设备会向厂家图床请求该封面图。</li>
+        <li>崩溃分析使用<strong>腾讯 Bugly</strong>，用于定位闪退与异常，不是广告投放。详见 <a href="privacy/">隐私政策</a>。</li>
+        <li>卸载应用后，本机车库数据会一并删除；我们无法从服务器代为恢复。</li>
+      </ul>
+    </div>
+
+    <h2>上架状态</h2>
+    <div class="card">
+      <p><strong>App Store 即将上架。</strong>本页仅作产品介绍，以及 App Store Connect 所需的营销 / 支持 / 隐私链接。当前不提供可下载的商店链接。</p>
+      <p class="muted-inline">包名 <code>com.tracklog.tracklog</code> · 应用版本 <strong>1.0.0</strong></p>
+    </div>
+
+    <div class="cta-row">
+      <a class="cta" href="support/">技术支持</a>
+      <a class="cta cta-secondary" href="privacy/">隐私政策</a>
+      <a class="cta cta-secondary" href="mailto:xue@flonger.com?subject=%E8%BD%A8%E8%BF%B9%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">发邮件联系</a>
+    </div>
   </main>
   <footer>
     <div class="inner">
-      <p>轨迹 · 包名 com.tracklog.tracklog · 联系 <a href="mailto:xue@flonger.com">xue@flonger.com</a></p>
+      <p>轨迹 · 包名 com.tracklog.tracklog · 版本 1.0.0 · 联系 <a href="mailto:xue@flonger.com">xue@flonger.com</a></p>
     </div>
   </footer>
 </body>
